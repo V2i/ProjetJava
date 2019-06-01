@@ -1,36 +1,35 @@
 package graph;
 
-import java.util.List;
+
+import java.util.ArrayList;
+
 
 public interface Graph {
-	List<Vertex> listOfVertex();
-	List<Edge> listOfEdge();
 	
-
-	public Vertex[] neighboursVertex(Vertex vertex);
+	public ArrayList<Vertex> neighboursVertex(Vertex vertex);
 	
 	public String toStringVertex();
 	
 	public String toStringEdge();
 	
-	void addVertex(Vertex vertex);
+	public void addVertex(Vertex vertex);
 	
-	void removeVertex(Vertex vertex);
+	public void removeVertex(Vertex vertex);
 	
-	int nbVertex();
+	public int nbVertex();
 	
-	void addEdge(Vertex vertex1,Vertex vertex2);
+	public void addEdge(Vertex vertex1,Vertex vertex2);
 		
-	void removeEdge(Edge edge);
+	public void removeEdge(Edge edge);
 		
-	void addUndirectedEdge(UndirectedEdge edge);
+	public void addUndirectedEdge(UndirectedEdge edge);
 	
-	void removeUndirectedEdge(UndirectedEdge edge);
+	public void removeUndirectedEdge(UndirectedEdge edge);
 	
-	void addDirectedEdge(DirectedEdge edge);
+	public void addDirectedEdge(DirectedEdge edge);
 	
-	void removeDirectedEdge(DirectedEdge edge);
+	public void removeDirectedEdge(DirectedEdge edge);
 	
-	int nbEdge();
+	public int nbEdge();
 
 }
