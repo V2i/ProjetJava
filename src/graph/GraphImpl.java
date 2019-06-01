@@ -1,16 +1,28 @@
 package graph;
-
+import graph.*;
 
 import java.util.ArrayList;
+import java.io.Serializable;
 
 
-public class GraphImpl implements Graph {
+public class GraphImpl implements Graph, Serializable{
 
     private ArrayList<Vertex> listVertex;
     private ArrayList<Edge> listEdge;
 
     public GraphImpl() {
+        this.listEdge = new ArrayList<Edge>();
+        this.listVertex = new ArrayList<Vertex>();
+    }
 
+    public GraphImpl(ArrayList<Vertex> listVertex, ArrayList<Edge> listEdge) {
+        this.listEdge = listEdge;
+        this.listVertex = listVertex;
+    }
+
+    public GraphImpl(ArrayList<Vertex> listVertex) {
+        this.listEdge = new ArrayList<Edge>();
+        this.listVertex = listVertex;
     }
 
     public ArrayList<Vertex> neighboursVertex(Vertex vertex){
@@ -81,5 +93,9 @@ public class GraphImpl implements Graph {
 
     public int nbEdge() {
         return this.listEdge.size();
+    }
+
+    public ArrayList<Vertex> getListVertex() {
+        return this.listVertex;
     }
 }
