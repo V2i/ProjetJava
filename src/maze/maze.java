@@ -17,7 +17,9 @@ public class Maze implements Serializable {
     private int width;
 
     public Maze(){
-
+        this.graph = new GraphImpl();
+        this.height = 0;
+        this.width = 0;
     }
 
     public Maze(ArrayList<Vertex> cells, int height, int width) {
