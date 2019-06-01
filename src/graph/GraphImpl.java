@@ -13,8 +13,8 @@ public class GraphImpl implements Graph {
 
     }
 
-    public ArrayList<Vertex> neighboorsVertex(Vertex vertex){
-        ArrayList<Vertex> listVertex;
+    public ArrayList<Vertex> neighboursVertex(Vertex vertex){
+        ArrayList<Vertex> listVertex = null;
 
         for(Edge edge : this.listEdge){
             if(edge.getVertex1().equals(vertex)) {
@@ -46,7 +46,7 @@ public class GraphImpl implements Graph {
         this.listVertex.add(vertex);
     }
 
-    public void remove(Vertex vertex) {
+    public void removeVertex(Vertex vertex) {
         this.listVertex.remove(vertex);
     }
 
